@@ -49,7 +49,7 @@ print(thislist1)
 # ['apple', 'banana', 'coconut']
 
 
-# Access Items
+#----------------- Access List Items---------------------
 # List items are indexed, we can access them 
 # by referring to the index number:
 
@@ -73,13 +73,31 @@ print(thislist3[4:])
 print(thislist3[-4:-1])
 # ['orange', 'kiwi', 'melon']
 
-#  Check if item exists
+# ____Check if item exists___
 if "coconut" in thislist3:
   print("Yes, 'apple' is in the fruits list")
 else:
   print("This fruit is not in the list")
 
 # This fruit is not in the list
+
+#------------------ Change List Items ------------------
+
+#-----------------  Add List Items  -------------------
+
+#----------------  Remove List Items  -----------------
+
+#------------------  Loop Lists  ----------------------
+
+#----------------  List Comprehension  ----------------
+
+#-------------------  Sort Lists  ---------------------
+
+#-------------------  Copy Lists  ---------------------
+
+#-------------------  Join Lists  ---------------------
+
+#-------------------  List Method  --------------------
 
 
 
