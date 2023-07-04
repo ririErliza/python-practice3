@@ -48,7 +48,6 @@ thislist1 = list(("apple","banana","coconut"))
 print(thislist1)
 # ['apple', 'banana', 'coconut']
 
-
 #----------------- Access List Items---------------------
 # List items are indexed, we can access them 
 # by referring to the index number:
@@ -59,6 +58,9 @@ print(thislist2[1])
 
 print(thislist2[-1]) #from backward
 # monitor
+
+
+
 
 thislist3 = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist3[2:5]) # return the third, fourth, & fifth items
@@ -73,6 +75,8 @@ print(thislist3[4:])
 print(thislist3[-4:-1])
 # ['orange', 'kiwi', 'melon']
 
+
+
 # ____Check if item exists___
 if "coconut" in thislist3:
   print("Yes, 'apple' is in the fruits list")
@@ -80,6 +84,9 @@ else:
   print("This fruit is not in the list")
 
 # This fruit is not in the list
+
+
+
 
 #------------------ Change List Items ------------------
 
@@ -107,14 +114,109 @@ print(thislist5)
 
 
 
-
 #-----------------  Add List Items  -------------------
+
+# append()
+colors = ["red", "black", "green"]
+colors.append("orange")
+print(colors)
+#['red', 'black', 'green', 'orange']
+
+# insert()
+colors.insert(1,"blue")
+print(colors)
+#['red', 'blue', 'black', 'green', 'orange']
+
+# extend
+dark = ["grey, brown, coal"]
+colors.extend(dark)
+print(colors)
+# ['red', 'blue', 'black', 'green', 'orange', 'grey, brown, coal']
+
+# add any iterable
+a_tuple = ("pink", "babyblue")
+colors.extend(a_tuple)
+print(colors)
+#['red', 'blue', 'black', 'green', 'orange', 'grey, brown, coal', 'pink', 'babyblue']
+
 
 #----------------  Remove List Items  -----------------
 
+# remove()
+colors.remove("black")
+colors.remove("red")
+colors.remove("blue")
+print(colors)
+# ['green', 'orange', 'grey, brown, coal', 'pink', 'babyblue']
+
+# pop()
+colors.pop(1) #remove specified index
+print(colors)
+#['green', 'grey, brown, coal', 'pink', 'babyblue']
+
+colors.pop() #if not specified it will remove the last item
+print(colors)
+# ['green', 'grey, brown, coal', 'pink']
+
+
+# del
+del colors[0]
+print(colors)
+#['grey, brown, coal', 'pink']
+
+# clear()
+colors.clear()
+print(colors)
+# []  #the list remain, but has no content
+
+del colors #this will delete the entire list
+
 #------------------  Loop Lists  ----------------------
 
+lands = ["DE", "UK", "NE", "SP"]
+
+# print all the items in the list, one by one
+for land in lands:
+   print(land)
+
+# DE
+# UK
+# NE
+# SP
+
+# Print all items by referring to their index number
+for i in range(len(lands)):
+  print(i, lands[i])
+
+# 0 DE
+# 1 UK
+# 2 NE
+# 3 SP
+
+# Print all items, using a while loop to go
+#  through all the index numbers
+subjects = ["maths","biology","physics"]
+i = 0
+while i< len(subjects):
+  print(i, subjects[i])
+  i += 1
+
+# 0 maths
+# 1 biology
+# 2 physics
+
+# using list comprehension
+[print(x) for x in subjects]
+
+# maths
+# biology
+# physics
+
+
+
 #----------------  List Comprehension  ----------------
+
+
 
 #-------------------  Sort Lists  ---------------------
 
