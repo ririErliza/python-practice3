@@ -242,7 +242,20 @@ print(newlist)
 # the Syntax
 # newlist = [expression for item in iterable if condition == True]
 
+newlist = [x for x in kitchen if x != "fork"]
+print(newlist)
+# ['spoon', 'knife', 'ladle']
 
+
+# iterable
+# use the range() function to create an iterable
+numbersList = [number for number in range(5)]
+print(numbersList)
+# [0, 1, 2, 3, 4]
+
+someNumbers = [x for x in range(10) if x<11]
+print(someNumbers)
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 #-------------------  Sort Lists  ---------------------
 
