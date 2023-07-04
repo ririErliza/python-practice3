@@ -17,6 +17,8 @@
         # ( since list is indexed, list can have items with
         # the same value)
 
+
+
 # create a list
 thislist=["apple", "banana", "strawberry"]
 print(thislist)
@@ -48,6 +50,11 @@ thislist1 = list(("apple","banana","coconut"))
 print(thislist1)
 # ['apple', 'banana', 'coconut']
 
+
+
+
+
+
 #----------------- Access List Items---------------------
 # List items are indexed, we can access them 
 # by referring to the index number:
@@ -58,8 +65,6 @@ print(thislist2[1])
 
 print(thislist2[-1]) #from backward
 # monitor
-
-
 
 
 thislist3 = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
@@ -84,6 +89,8 @@ else:
   print("This fruit is not in the list")
 
 # This fruit is not in the list
+
+
 
 
 
@@ -114,6 +121,9 @@ print(thislist5)
 
 
 
+
+
+
 #-----------------  Add List Items  -------------------
 
 # append()
@@ -138,6 +148,10 @@ a_tuple = ("pink", "babyblue")
 colors.extend(a_tuple)
 print(colors)
 #['red', 'blue', 'black', 'green', 'orange', 'grey, brown, coal', 'pink', 'babyblue']
+
+
+
+
 
 
 #----------------  Remove List Items  -----------------
@@ -170,6 +184,10 @@ print(colors)
 # []  #the list remain, but has no content
 
 del colors #this will delete the entire list
+
+
+
+
 
 #------------------  Loop Lists  ----------------------
 
@@ -211,6 +229,7 @@ while i< len(subjects):
 # maths
 # biology
 # physics
+
 
 
 
@@ -280,6 +299,9 @@ newGrades = [x if x!="c" else "b" for x in grades]
 print(newGrades)
 #['a', 'b', 'b', 'b', 'a', 'a', 'b']
 
+
+
+
 #-------------------  Sort Lists  ---------------------
 
 #_______Sort List Alphanumerically
@@ -317,14 +339,74 @@ print(savings)
 #[65, 65, 50, 82, 100]
 # Sort the list based on how close the number is to 60
 
+
+
 #________Case Insensitive Sort
 comedians.sort(key =str.lower)
 print(comedians)
+#['jae Suk', 'Ji Hyo', 'kwang Soo', 'So Min', 'Suk Jin']
+
+
+# reverse order
+comedians.reverse()
+print(comedians)
+#['Suk Jin', 'So Min', 'kwang Soo', 'Ji Hyo', 'jae Suk']
+
+
+
+
 #-------------------  Copy Lists  ---------------------
+
+# copy()
+actors = comedians.copy()
+print(actors)
+#['Suk Jin', 'So Min', 'kwang Soo', 'Ji Hyo', 'jae Suk']
+
+# list()
+teachers = ["Suzi","Buana","Lorry","Trisha"]
+leaders = list(teachers)
+print(leaders)
+#['Suzi', 'Buana', 'Lorry', 'Trisha']
+
 
 #-------------------  Join Lists  ---------------------
 
+list1= ["a","b","c"]
+list2= [1,2,3]
+
+#1
+list3= list1 + list2
+print(list3)
+#['a', 'b', 'c', 1, 2, 3]
+
+#2
+# for x in list2:
+#   list1.append(x)
+# print(list1)
+#['a', 'b', 'c', 1, 2, 3]
+
+#3
+list1.extend(list2)
+print(list1)
+#['a', 'b', 'c', 1, 2, 3]
+
+
 #-------------------  List Method  --------------------
 
+
+# Python has a set of built-in methods that you can use on lists.
+
+# Method	    Description
+# append()	  Adds an element at the end of the list
+# clear()	    Removes all the elements from the list
+# copy()	    Returns a copy of the list
+# count()	    Returns the number of elements with the specified value
+# extend()	  Add the elements of a list (or any iterable), to the end of the current list
+# index()	    Returns the index of the first element with the specified value
+# insert()	  Adds an element at the specified position
+# pop()	      Removes the element at the specified position
+# remove()	  Removes the item with the specified value
+# reverse()	  Reverses the order of the list
+# sort()	    Sorts the list
 
 
