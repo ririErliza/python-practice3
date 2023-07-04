@@ -282,6 +282,44 @@ print(newGrades)
 
 #-------------------  Sort Lists  ---------------------
 
+#_______Sort List Alphanumerically
+# sort()
+comedians = ["Ji Hyo", "jae Suk", "Suk Jin", "kwang Soo", "So Min"]
+
+comedians.sort()
+print(comedians)
+#['Ji Hyo', 'So Min', 'Suk Jin', 'jae Suk', 'kwang Soo']
+# capital letter comes first
+
+savings = [100,50,65,82,65]
+savings.sort()
+print(savings)
+#[50, 65, 65, 82, 100]
+
+
+
+#_________Sort descending
+# reverse = True
+comedians.sort(reverse =True)
+print(comedians)
+#['kwang Soo', 'jae Suk', 'Suk Jin', 'So Min', 'Ji Hyo']
+
+
+
+#________Customize Sort Function
+# key = function
+
+def myFunc(n):
+  return abs(n-60)
+
+savings.sort(key=myFunc)
+print(savings)
+#[65, 65, 50, 82, 100]
+# Sort the list based on how close the number is to 60
+
+#________Case Insensitive Sort
+comedians.sort(key =str.lower)
+print(comedians)
 #-------------------  Copy Lists  ---------------------
 
 #-------------------  Join Lists  ---------------------
