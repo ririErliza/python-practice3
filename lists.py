@@ -83,6 +83,31 @@ else:
 
 #------------------ Change List Items ------------------
 
+thislist4 = ["socks", "pants", "t-shirt", "jeans", "hat", "jacket"]
+
+thislist4[1] = "rock"
+print(thislist4)
+# ['socks', 'rock', 't-shirt', 'jeans', 'hat', 'jacket']
+
+thislist4[1:3]=["sweater","panty"]
+print(thislist4)
+# ['socks', 'sweater', 'panty', 'jeans', 'hat', 'jacket']
+
+# If you insert more/less items than you replace, the new items
+# will be inserted where you specified, and the remaining
+# items will move accordingly
+
+
+#____ insert() ____
+
+thislist5 = ["a", "e", "i"]
+thislist5.insert(2,"u") # this will go to index #2
+print(thislist5)
+# ['a', 'e', 'u', 'i']
+
+
+
+
 #-----------------  Add List Items  -------------------
 
 #----------------  Remove List Items  -----------------
