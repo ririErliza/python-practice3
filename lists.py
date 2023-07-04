@@ -257,6 +257,29 @@ someNumbers = [x for x in range(10) if x<11]
 print(someNumbers)
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+
+# _______Expression________
+
+grades = ["a", "b","c", "c", "a", "a", "b"]
+
+#Set the values in the new list to upper case
+newGrades = [x.upper() for x in grades]
+print(newGrades)
+# ['A', 'B', 'C', 'C', 'A', 'A', 'B']
+
+#Set all values in the new list to 'A'
+newGrades = ['A' for x in grades]
+print(newGrades)
+# ['A', 'A', 'A', 'A', 'A', 'A', 'A']
+
+#Return "B" instead of "C"
+newGrades = [x if x!="c" else "b" for x in grades]
+
+#return the item if it's not C, if it's C return B
+
+print(newGrades)
+#['a', 'b', 'b', 'b', 'a', 'a', 'b']
+
 #-------------------  Sort Lists  ---------------------
 
 #-------------------  Copy Lists  ---------------------
