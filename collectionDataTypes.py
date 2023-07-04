@@ -4,12 +4,12 @@
 
 # LIST is a collection which is ordered and changeable. 
         # Allows duplicate members.
-# TUPLE is a collection which is ordered and unchangeable.
+# TUPLE is a collection which is ordered and UNchangeable.
         #  Allows duplicate members.
-# SET is a collection which is unordered, unchangeable*, 
-        # and unindexed. No duplicate members.
+# SET is a collection which is unordered, UNchangeable*, 
+        # and unindexed. NO duplicate members.
 # DICTIONARY is a collection which is ordered** and 
-        # changeable. No duplicate members.
+        # changeable. NO duplicate members.
 
 
 
