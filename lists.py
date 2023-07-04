@@ -216,6 +216,32 @@ while i< len(subjects):
 
 #----------------  List Comprehension  ----------------
 
+humans = ["understanding_human", "immoral_human", "destructive_human", "overcompetitive_human", "real_human", "growthmindset_human"]
+my_environment=[]
+
+for human in humans:
+  if "growth" in human:
+    my_environment.append(human)
+  elif "understanding" in human:
+    my_environment.append(human)
+  elif "real" in human:
+    my_environment.append(human)
+
+print("I grow well when i am surrounded by:", ','.join(my_environment))
+# I grow well when i am surrounded by: understanding_human,real_human,growthmindset_human
+
+
+
+# with list comprehension
+
+kitchen = ["spoon", "fork", "knife", "ladle"]
+newlist = [x for x in kitchen if "o" in x]
+print(newlist)
+# ['spoon', 'fork']
+
+# the Syntax
+# newlist = [expression for item in iterable if condition == True]
+
 
 
 #-------------------  Sort Lists  ---------------------
