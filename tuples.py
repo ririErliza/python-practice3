@@ -129,10 +129,122 @@ fruitsTup += y
 print(fruitsTup)
 # ('apple', 'banana', 'cherry', 'orange')
 
+#Remove Items
+# Note: You cannot remove items in a tuple.
+
+# Tuples are unchangeable, so you cannot remove items from it, but you can
+#  use the same workaround as we used for changing and adding tuple items
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+print(thistuple)
+# ('banana', 'cherry')
+
+# The del keyword can delete the tuple completely
+del thistuple
+#print(thistuple) #this will raise an error because the tuple no longer exists
+
+
 #-------------------  Unpack Tuple  -----------------------
+
+# When we create a tuple, we normally assign values to it.
+#  This is called "packing" a tuple
+# But, in Python, we are also allowed to extract the values back into variables.
+#  This is called "unpacking"
+
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+# apple
+# banana
+# cherry
+
+# Using Asterisk*
+# If the number of variables is less than the number of values,
+#  you can add an * to the variable name and the values will be
+#  assigned to the variable as a list
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+# apple
+# banana
+# ['cherry', 'strawberry', 'raspberry']
+
+
 
 #-------------------  Loop Tuple  -------------------------
 
+#iterate through the items and print the values:
+
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+
+# apple
+# banana
+# cherry
+
+# Loop Through the Index Numbers
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+
+# apple
+# banana
+# cherry
+
+# Using a While Loop
+thistuple = ("ding", "dang", "deng")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+
+# ding
+# dang
+# deng
+
 #-------------------  Join Tuple  -------------------------
 
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+#('a', 'b', 'c', 1, 2, 3)
+
+# Multiply Tuples
+fruits = ("Tip", "Tap", "Top")
+mytuple = fruits * 2
+
+print(mytuple)
+# ('Tip', 'Tap', 'Top', 'Tip', 'Tap', 'Top')
+
 #------------------  Tuple Methods  -----------------------
+
+# count()
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.count(5) # The count() method returns the number
+                       # of times a specified value appears in the tuple
+print(x)
+# 2
+
+# index()
+thistuple_a = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+y = thistuple_a.index(8) # Searches the tuple for a specified value and
+                         # returns the position of where it was found
+print(y)
+# 3
